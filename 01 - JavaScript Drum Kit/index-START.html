@@ -58,6 +58,16 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+ //1-Select where to start and listen for an event associated with the click of a key
+//2- Save in a constant the key that has been clicked, which is associated with a specific audio using the code
+ window.addEventListener('keydown', function (e) {
+   const audio = document.querySelector(`audio[data-key = "${e.keyCode}"]`);
+   if (!e.keyCode){
+     console.log("this is wrong");
+   }
+   console.log(audio);
+ });
+
 
 </script>
 
